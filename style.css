@@ -345,6 +345,22 @@ body {
 
 .gallery-item:hover .play-btn { background: rgba(92, 61, 82, 0.5); }
 
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(transparent, rgba(92, 61, 82, 0.85));
+  color: white;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+
+.gallery-item:hover .gallery-caption { transform: translateY(0); }
+
 /* ===== LETTER ===== */
 .letter-card {
   background: var(--white);

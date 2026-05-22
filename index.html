@@ -143,7 +143,7 @@
   <!-- ======= GALLERY / MEDIA ======= -->
   <section class="section" id="gallery">
     <h2 class="section-title">ช่วงเวลาของเรา</h2>
-    <p class="section-sub">รูปและคลิปจะมาเร็วๆนี้ — ใส่ไฟล์ในโฟลเดอร์ <code>media/</code> แล้วแจ้งผมได้เลยครับ</p>
+    <p class="section-sub">คลิกที่รูปหรือคลิปเพื่อดูแบบเต็มๆ ได้เลย 🎬</p>
     <div class="gallery-grid" id="galleryGrid">
       <!-- Media items are loaded from media-data.js -->
       <div class="gallery-placeholder">
@@ -186,12 +186,13 @@
     <p class="footer-sub">5 ปีแล้วนะ — 23/05/2021 → 23/05/2026</p>
   </footer>
 
-  <!-- Video Modal -->
+  <!-- Media Modal -->
   <div class="modal" id="videoModal">
     <div class="modal-backdrop" id="modalBackdrop"></div>
     <div class="modal-content">
       <button class="modal-close" id="modalClose">✕</button>
       <video id="modalVideo" controls playsinline></video>
+      <img id="modalImg" style="display:none;max-width:80vw;max-height:80vh;display:none;" alt="" />
     </div>
   </div>
 
