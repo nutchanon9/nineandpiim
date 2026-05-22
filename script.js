@@ -76,24 +76,28 @@ const mediaItems = [
     const div = document.createElement('div');
     div.className = 'gallery-item';
 
+    const thumb = document.createElement('div');
+    thumb.className = 'gallery-thumb';
+
     if (item.type === 'image') {
       const img = document.createElement('img');
       img.src = item.src;
       img.alt = item.caption || '';
       img.loading = 'lazy';
-      div.appendChild(img);
+      thumb.appendChild(img);
+      div.appendChild(thumb);
       div.addEventListener('click', () => openImageModal(item.src));
     } else if (item.type === 'video') {
-      // show placeholder — don't preload all videos at once
       const placeholder = document.createElement('div');
       placeholder.className = 'video-thumb-placeholder';
-      div.appendChild(placeholder);
+      thumb.appendChild(placeholder);
 
       const btn = document.createElement('div');
       btn.className = 'play-btn';
       btn.innerHTML = '▶';
-      div.appendChild(btn);
+      thumb.appendChild(btn);
 
+      div.appendChild(thumb);
       div.addEventListener('click', () => openVideoModal(item.src));
     }
 
@@ -120,6 +124,7 @@ function openVideoModal(src) {
   video.style.display = 'block';
   img.style.display = 'none';
   modal.classList.add('open');
+  video.load();
   video.play().catch(() => {});
 }
 
