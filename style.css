@@ -160,13 +160,6 @@ body {
   font-size: 0.95rem;
 }
 
-.section-sub code {
-  background: var(--pink-light);
-  padding: 0.1em 0.4em;
-  border-radius: 6px;
-  font-size: 0.9em;
-}
-
 /* ===== TIMELINE ===== */
 .timeline {
   position: relative;

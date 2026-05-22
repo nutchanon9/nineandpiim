@@ -27,11 +27,6 @@
 })();
 
 // ===== GALLERY =====
-// To add media: put image/video files in the media/ folder
-// then add entries to this array.
-// type: 'image' or 'video'
-// src: path relative to index.html, e.g. 'media/photo1.jpg'
-// caption: short text shown on hover (optional)
 const mediaItems = [
   // { type: 'image', src: 'media/photo1.jpg', caption: 'Grand Canyon ราชบุรี' },
   // { type: 'video', src: 'media/clip1.mp4',  caption: 'คลิปด้วยกัน' },
@@ -73,8 +68,8 @@ const mediaItems = [
 })();
 
 // ===== VIDEO MODAL =====
-const modal   = document.getElementById('videoModal');
-const video   = document.getElementById('modalVideo');
+const modal    = document.getElementById('videoModal');
+const video    = document.getElementById('modalVideo');
 const closeBtn = document.getElementById('modalClose');
 const backdrop = document.getElementById('modalBackdrop');
 
