@@ -82,14 +82,12 @@ const mediaItems = [
       img.alt = item.caption || '';
       img.loading = 'lazy';
       div.appendChild(img);
-      div.addEventListener('click', () => openImageModal(item.src, item.caption));
+      div.addEventListener('click', () => openImageModal(item.src));
     } else if (item.type === 'video') {
-      const thumb = document.createElement('video');
-      thumb.src = item.src + '#t=0.5';
-      thumb.preload = 'metadata';
-      thumb.muted = true;
-      thumb.playsInline = true;
-      div.appendChild(thumb);
+      // show placeholder — don't preload all videos at once
+      const placeholder = document.createElement('div');
+      placeholder.className = 'video-thumb-placeholder';
+      div.appendChild(placeholder);
 
       const btn = document.createElement('div');
       btn.className = 'play-btn';
@@ -117,14 +115,15 @@ const closeBtn = document.getElementById('modalClose');
 const backdrop = document.getElementById('modalBackdrop');
 
 function openVideoModal(src) {
+  const img = document.getElementById('modalImg');
   video.src = src;
   video.style.display = 'block';
-  document.getElementById('modalImg').style.display = 'none';
+  img.style.display = 'none';
   modal.classList.add('open');
-  video.play();
+  video.play().catch(() => {});
 }
 
-function openImageModal(src, caption) {
+function openImageModal(src) {
   const img = document.getElementById('modalImg');
   img.src = src;
   img.style.display = 'block';
