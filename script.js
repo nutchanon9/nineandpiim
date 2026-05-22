@@ -52,7 +52,7 @@ const mediaItems = [
   { type: 'video', src: 'media/Clip24.MOV', caption: '🎰 พี่พิมเทพเซียนตู้ครีบ ได้มาสิบกว่าตัว!' },
   { type: 'video', src: 'media/Clip25.MOV', caption: '🕹️ Arcade ต่อ สนุกมากเลย' },
   { type: 'video', src: 'media/Clip26.MOV', caption: '🌏 เที่ยวต่อแบบผู้ประสบภัย' },
-  { type: 'image', src: 'media/Clip27.jpg', caption: '🚠 รูปคู่บนกระเช้า พวกเราน่ารักเนอะ' },
+  { type: 'image', src: 'media/Clip27.JPG', caption: '🚠 รูปคู่บนกระเช้า พวกเราน่ารักเนอะ' },
   { type: 'video', src: 'media/Clip28.MOV', caption: '🇻🇳 เวียดนาม! ลองนวดครั้งแรก ฟินมาก' },
   { type: 'video', src: 'media/Clip29.MOV', caption: '⛳ ขี้เกียจเดิน เลยจ้างนั่งรถกอล์ฟ' },
   { type: 'video', src: 'media/Clip30.MOV', caption: '🏙️ กลับมาเที่ยวสยาม บรรยากาศดี ลมเย็น' },
